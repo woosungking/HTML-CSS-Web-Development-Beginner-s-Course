@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자식노드 div>ul>li -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <!-- 형제노드 div>ul+ol+div -->
+    <div>
+        <ul></ul>
+        <ol></ol>
+        <div></div>
+    </div>
+    
+    <!-- 반복하기 div>ul>li*3 -->
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- 아이디="item" 이라는 span tag를 만들고 싶다면 span#item, 다른테그에도 적용이 된다! -->
+        <span id="item"></span>
+
+    <!-- 클레스의 경우에는 . 넣어주면 된다! -->
+    <div class="item"></div>
+    <p class="item"></p>
+
+    <!-- 테그안에 클레스를 만들고 컨텐츠(내용)을 넣는법 p.container{hello} <- 이거 중괄호임 -->
+    <p class="containner">hello</p>
+
+    <!-- 자동 넘버링은 $ 표시(위에서 배운 * 등등 사용 가능) -->
+    <!-- 1. p#item$ -->
+    <!-- 2. p.class$*5 -->
+    <!-- 3. .class{item$}*3 -->
+    <p id="item1"></p>
+    <p class="class1"></p>
+    <p class="class2"></p>
+    <p class="class3"></p>
+    <p class="class4"></p>
+    <p class="class5"></p>
+    <div class="class">item1</div>
+    <div class="class">item2</div>
+    <div class="class">item3</div>
+
+
+
+
+
+</body>
+</html>
