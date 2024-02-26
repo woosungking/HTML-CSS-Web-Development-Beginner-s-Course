@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table tag</title>
+
+    <style>
+        table{
+            border : 1px solid black;
+            border-collapse : collapse;
+        }
+        th,td{
+            border : 1px solid black;
+
+        }
+
+    </style>
+</head>
+
+<!-- 테이블 테그를 다루는 기본적인 방법들이 있습니다! -->
+
+<body>
+    <h1>테이블 테그</h1>
+    <table>
+        
+        <caption>프로필 테이블(테이블에 대한 설명)</caption>
+        <!-- caption은 테이블의 대한 설명을 적는 태그 입니다. --> 
+        <tr>
+            <!-- 행을 나타내는 태그은 tr태그 입니다. -->
+            <th>이름</th>
+            <th>취미</th>
+            <th>특기</th>
+            <!-- th는 열을 나타내지만 제목에 해당하는 열 입니다. -->
+        </tr>
+
+        <tr>
+            <td>김우성</td>
+            <td>헬스</td>
+            <td>코딩</td>
+        <!-- td또한 열을 나타내는데 th랑 다르게 제목의 속성? 을 나타내주는 열 입니다. -->
+        </tr>
+
+
+        <tr>
+            <td>짐코딩</td>
+            <td>헬스</td>
+            <td>코딩</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>Table 그룹 테그</h1>
+    <table>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <!-- colgroup은 테이블의 "열(세로)" 부분을 독립적으로 조작 할 수 있는 태그 입니다. 아래는 6개의 행이 있으므로 6개를 선언하였습니다. -->
+
+        <thead>
+            <!-- 테이블의 머리 즉 제목?쪽에 해당되는 행을 감싸주는 태그 입니다. -->
+        <tr>
+            <th>반</th>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>코딩</th>
+        </tr>
+    </thead>
+        <tbody>
+            <!-- 테이블의 몸통 내용? 에 해당하는 행들을 감싸주는 태그 입니다. -->
+        <tr>
+            <td>1반</td>
+            <td>정우성</td>
+            <td>100정</td>
+            <td>100정</td>
+            <td>100정</td>
+            <td>100정</td>
+        </tr>
+        <tr>
+            <td>2반</td>
+            <td>심우성</td>
+            <td>100정</td>
+            <td>100정</td>
+            <td>100정</td>
+            <td>100정</td>
+        </tr>
+    </tbody>
+
+        <tfoot>
+        <tr>
+            <td>4반</td>
+            <td>감우성</td>
+            <td>100정</td>
+            <td>100정</td>
+            <td>100정</td>
+            <td>100정</td>
+        </tfoot>
+        <!-- 테이블이 아래쪽 부분이 되는 부분을 감싸주는 태그 입니다. 범위는 내가 유동적으로 지정하면 됌.-->
+        </tr>
+    </table>
+    
+
+    <!-- 기존 테이블들의 셀을? 합치는 태그들에는 rowspan(열), colspan(행)이 있다. -->
+
+
+</body>
+</html>
