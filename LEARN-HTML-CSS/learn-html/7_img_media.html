@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .redirect{
+        width: 100px;
+        height: 100px;
+        background-color : chartreuse;
+        border : 1px solid red;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h1>이미지 태그</h1>
+        <img weight = "50" height="80" src= "./images/독수리.jpg" alt="egle">
+    </div>
+    <div>
+        <h1>오디오 태그</h1>
+        <audio src="./audios/audio1.mp3" controls></audio>
+    </div>
+
+    <div>
+        <h1>비디오 태그</h1>
+        <video src="./videos/websocket.mov" controls type="video/mp4"></video>
+
+        <!-- 자동재생 썸내일 등등 추가적인 정보는 검색으로 필요할때 보자 -->
+    </div>
+
+    <div>
+        <h1>하이퍼 태그</h1>
+        <a href="https://github.com/woosungking"> 내 깃허브</a>
+        <a href="https://github.com/gymcoding/learn-html-css" target="_blank">짐코딩님 깃허브</a>
+
+        <a href="#target">타겟으로 이동</a>
+        <!-- 태그에 id를 넣어주고 그 id값을 참조함으로써 페이지 내부에서도 이동 가능 -->
+        <a href="mailto:abuga991008@gmail.com"> mailto를 사용해서 이메일 보내기</a>
+    </div>
+
+<div class="redirect">1</div>
+<div class="redirect">2</div>
+<div class="redirect">3</div>
+<div class="redirect">4</div>
+<div class="redirect">5</div>
+<div class="redirect">6</div>
+<div class="redirect">7</div>
+<div class="redirect">8</div>
+<div class="redirect">9</div>
+<div class="redirect" id="target" >10</div>
+
+</body>
+</html>

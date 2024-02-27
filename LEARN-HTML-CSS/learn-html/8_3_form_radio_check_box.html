@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Check Box</title>
+</head>
+<body>
+    <form action="" method="">
+        <fieldset>
+            <legend> 좋아하는 색을 선택해주세요 </legend>
+            <ul>
+                <li>
+                    <label for="red">빨강</label>
+                    <input type="checkbox" id="red" value="red">
+                </li>
+                <li>
+                    <label for="orange">주황</label>
+                    <input type="checkbox" id="orange" value="orange">
+                </li>
+                <li>
+                    <label for="yellow">노랑</label>
+                    <input type="checkbox" id="yellow" value="yellow">
+                </li>
+                <li>
+                    <label for="green">초록</label>
+                    <input type="checkbox" id="green" value="green">
+                </li>
+                <li>
+                    <label for="blue">파랑</label>
+                    <input type="checkbox" id="blue" value="blue">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>배송방법</legend>
+            <ul>
+                <li>
+                    <label for="free">무료 배송</label>
+                    <input type="radio" name="free" id="free">
+                </li>
+                <li>
+                    <label for="nfree">유료 배송</label>
+                    <input type="radio" name="nfree" id="nfree">
+                </li>
+                <!-- radio 타입에서 그룹핑을 하려면 input부분의 name을 같은걸로 맞추어야함!@ -->
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <label for="textArea"> textarea</label>
+            <textarea name="textArea" id="textArea" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend> 주문상품을 선택해 주세요()</legend>
+            <ul>
+                <li><select name="" id="" multiple>
+                    <option value="apple_10kg">사과</option>
+                    <option value="orange_10kg">오랜지</option>
+                    <option value="rabbit_10kg">토끼</option>
+                    <option value="pig_10kg">돼지</option>
+                    <option value="cow_10kg">소</option>
+                    서버에는 value의 값이 들어감.
+                </select>
+            </li>
+
+                <li>
+                    <label for="choose_flavor"> 맛을 고르시오.</label>
+                    <input list="choose_flavor">
+                    <datalist id="choose_flavor">
+                        <!-- input의 list이름이랑 datalist의 id값이 일치해야한다. -->
+                        <option value="aa">A</option>
+                        <option value="bb">B</option>
+                        <option value="cc">C</option>
+                        <option value="dd">D</option>
+
+                    </datalist>
+                </li>
+            </ul>
+        </fieldset>
+
+        <button type="submit">제출</button>
+        <!-- 버튼은 디폴드 값이 submit 타입이다. -->
+
+        <fieldset>
+            <button type="submit">제출하기</button>
+            <button type="reset">리셋하기</button>
+            <button type="button" onclick="alert('hello HTML')">alert기능</button>
+        </fieldset>
+    </form>
+</body>
+</html>

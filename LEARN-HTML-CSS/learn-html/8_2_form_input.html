@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" method="">
+    <fieldset>
+        <legend>Input Tag</legend>
+    
+    <ul>
+        <li>
+            <label for="text">Text</label>
+            <input type="text" id="text" value="readonly는 오직 일기전용" readonly>
+        </li>
+        <li>
+            <label for="email">아메일</label>
+            <input type="email" id="email" value="disable은 비활성화, 서버에 데이터 전송X" disabled>
+        </li>
+        <li>
+            <label for="tel">전화번호</label>
+            <input type="tel" id="tel" placeholder="placeholder는 안내문구 클릭하면 사라짐">
+        </li>
+        <li>
+            <label for="url">URL</label>
+            <input type="url" id="url">
+        </li>
+        <li>
+            <label for="number">Number</label>
+            <input type="number" id="number" required min="1" max="50">
+        </li>
+        <li>
+            <label for="range">Range</label>
+            <input type="range" id="range">
+        </li>
+    </ul>
+</fieldset>
+<input type="submit" value="제출">
+
+<fieldset>
+    <legend>날짜 관련</legend>
+    <ul>
+        <li>
+            <label for="date">date</label>
+            <input type="date" id="date" min="2023-01-01" max="2023-12-31">
+        </li>
+        <li>
+            <label for="month"> month</label>
+            <input type="month" id="month">
+        </li>
+        <li>
+            <label for="week">week</label>
+            <input type="week" id="week">
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>시간 관련</legend>
+    <ul>
+        <li>
+            <label for="time"time</label>
+            <input type="time" id ="time">
+        </li>
+    </ul>
+</fieldset>
+
+<fieldset>
+    <legend>그 외</legend>
+    <ul>
+        <li>
+            <input type="file" multiple>
+        </li>
+    </ul>
+</fieldset>
+
+</form>
+
+</body>
+</html>
