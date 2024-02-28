@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+        .left{
+            text-align: left;
+        }
+        .right{
+            text-align: right;
+        }
+
+        .article{
+            line-height: 1.8rem;
+            letter-spacing: 4px;
+            word-spacing: 8px;
+            text-indent: 50px;
+        }
+        .transform-case{
+            text-transform: uppercase; 
+            /* 대문자 소문자 변경 가능 */
+        }
+        .text-shadow{
+            text-shadow: 10px -30px 5px yellow;
+            /* 순서대로 "가로 세로 번지는정도 그림자색" 이다. */
+        }
+    </style>
+</head>
+<body>
+    <p class="center">중간 정렬</p>
+    <p class="left">왼쪽 정렬</p>
+    <p class="right">오른쪽 정렬</p>
+<hr>
+<!-- 글자의 자간, 높이, 들여쓰기등을 적용해보자 -->
+<h2 class="transform-case, text-shadow">What is Docker</h2>
+<p class="article">
+운영체제를 가상화하지 않는 컨테이너 기술이니만큼 가상머신에 비해서 가벼우며, VM을 포함하여 한 대의 서버에 여러 개의 서비스를 구동하기 좋다.
+보안상, 서비스가 털리더라도 원래의 서버에 영향을 미치기가 쉽지 않은 격리된 구조이니만큼, 가상화의 장점을 상당 부분 활용할 수 있다.
+가상머신(VM)들과 달리, 기존 리눅스 자원(디스크, 네트워크 등)을 그대로 활용할 수 있어서 여러 서비스들을 한 서버에 때려 박아 돌리기가 좋은 편이다.
+리눅스 커널 2.6.32-431 이상에서 지원한다. CentOS 기준으로는 CentOS 6.5 이상을 요구한다.
+다른 컨테이너의 환경을 쉽게 그대로 재현할 수 있는 이미지를 제공한다.
+레이어로 구성되어 있으며 이를 유니온 마운트해서 관리되고 있다.
+다양한 이미지가 레이어를 공유할 수 있기 때문에 효율적으로 저장공간을 활용할 수 있다.
+이미지를 제공하는 원격 저장소가 있어서 누구나 쉽게 이미지를 가져올 수 있다.
+</p> 
+</body>
+</html>
