@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,h2{
+            border: 2px solid black;
+
+            display: none;
+            visibility: hidden;
+            
+            /* 디스플레이 논은 보더를 주고 지지고 볶아도 영역을 차지 하지 않음, 즉 콘텐츠만 나옴
+            비쥬빌리티 히든은 영역을 차지 하지 않는 것 처럼 보이지만, 개발자 도구로 센터까보면 보인다 */
+        }
+
+        span,a{
+            border: 2px solid black;
+        }
+        article > div, 
+        article > span{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Display Block</h1>
+    <div></div>
+    <h2></h2>
+
+    <h1>Display Inline</h1>
+    <span>김우성</span>
+    <a href="">김김우우성성</a>
+<!-- 
+    중간결산: 
+    블록은 개발자도구 보면 알겠지만 컨텐츠를 포함한 세로부분을 전부 영역으로 가지고 있고, width 랑 height 적용가능, 이러한 이유로 띄어쓰기가 되는것처럼 보이는거임 세로로 배치 됌.
+    인라인은 as you know 컨텐츠부분까지만 영역으로 가지고있다, 즉 가로로 배치가 됌 -->
+
+    <h1>Display Inline Block</h1>
+    <article>
+    <div></div>
+    <div></div>
+    <div></div>
+    <span></span><span></span><span></span>
+    </article>
+<!-- 
+    중간결산: 쉽게 생각하면 인라인의 성질(세로로 배치되고 컨텐츠만큼 공간 차지) + 블록의 성질(width 와 height 에 값을 넣을 수 있음)을 각각 가지고 있음.
+    결론은 그냥 적용하면 span이랑 별 다를게 없어 보이지만 block처럼 width 랑 height 값 넣을 수 있음. -->
+</body>
+</html>
