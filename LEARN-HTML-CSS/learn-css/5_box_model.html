@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div{
+            background-color: lightsalmon;
+            width: 200px;
+            height: 200px;
+            border: 10px solid green;
+            padding: 20px;
+            margin: 40px;
+            
+        }
+        span{
+            background-color: lightsalmon;
+            width: 200px;
+            height: 200px;
+            border: 10px solid green;
+            padding: 20px;
+            margin: 40px;
+
+            display: inline-block;
+        }
+
+        .div-padding{
+            border: 1px solid black;
+            padding: 20px;
+             /* padding-top padding-bottom padding-right 혹은 padding: 20px 20px 20px 20px; */
+        }
+        .div-margin{
+            border: 1px solid black;
+            margin: 20px;
+        /* 가로는 상관 없는데 마진끼지 세로로 만나면 값이 큰 마진이랑 합쳐짐. */
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+
+    <span> span Tag 는 inline Tag이므로 div랑 다르게 작동 합니다. div랑 다르게 컨텐츠 크기에 따라 움직입니다.</span>
+
+    <div class="div-padding">
+    가벼우면서도 강력한 프로그램을 목표로 원래는 러시아에서 개발되었지만 2020년대 이후 현재는 미국에서 운영중인 오픈 소스 웹 서버 프로그램이다. '엔진엑스'라고 읽는다. HTTP와 리버스 프록시, IMAP/POP3 등의 서버 구동이 가능하다. Java 서블릿은 대개 Apache의 Tomcat을 연동해서 구동하고, PHP의 경우 PHP-FPM(FastCGI Process Manager)을 연동해서 구동한다.
+    </div>
+
+    <div class="div-margin">Docker와 Kubernetes는 모두 컨테이너 기술을 사용하지만, 각각 다른 역할을 수행한다.
+
+        Docker는 개발자가 소프트웨어 애플리케이션과 그에 필요한 라이브러리 및 종속성을 하나의 패키지로 묶어서 배포할 수 있도록 도와주는 플랫폼이다. Docker를 사용하면 개발자는 애플리케이션을 빠르게 개발하고, 테스트하고, 배포할 수 있다.
+        
+        Kubernetes는 컨테이너화된 애플리케이션을 자동으로 배포, 스케일링 및 관리하기 위한 오픈소스 플랫폼이다. Kubernetes를 사용하면 개발자는 애플리케이션을 더 쉽게 배포하고 관리할 수 있으며, 애플리케이션을 자동으로 스케일링하고 장애 복구를 처리하는 등의 작업을 처리할 수 있다.
+        
+        간단히 말해, Docker는 개발자가 애플리케이션 개발과 배포를 쉽게 할 수 있도록 도와주는 플랫폼이고, Kubernetes는 애플리케이션을 자동으로 관리하고 배포하는 플랫폼이다.</div>
+</body>
+</html>

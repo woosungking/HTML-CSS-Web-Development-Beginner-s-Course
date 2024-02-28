@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dokdo&display=swap');
+        /* 구글 폰트가서 원하는 폰트 @import눌러서 카피 후 스타일 맨위에 적어주면 사용가능 */
+        .dokdo-regular {
+  font-family: "Dokdo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        html{
+             /* font-family: cursive, monospace; 처음 폰트 지원 안되면 다음 폰트로 넘어감 */
+             
+        }
+
+        .content{
+            font-size: 18;
+        }
+        .font-itelic font-weight-bold{
+            font-style: italic;
+        }
+        .font-weight-bold{
+            font-weight: bold;
+        }
+        .font-weight-300{
+            font-weight:300;
+        }
+        .content-varient{
+            font-variant: small-caps;
+        }
+        .subtitle-rem{
+            font-size: 2rem;
+        }
+        .subtitle-em{
+            font-size: 2em;
+        }
+        .rectangle-width{
+            width: 100vw;
+            background-color: aquamarine;
+        }
+        .rectangle-height{
+            height: 100vh;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <h2 class="title">HTML-CSS-Web-Development-Beginner-s-Course </h2>
+    <p class="content">현제 듣는 강좌 입니다.</p>
+    <p class="content font-itelic">현제 듣는 강좌 입니다.</p>
+    <p class="content font-weight-bold">현제 듣는 강좌 입니다.</p>
+    <p class="content font-weight-300">현제 듣는 강좌 입니다.</p>
+    <p class="content font-weight">현제 듣는 강좌 입니다.</p>
+    <p class="content-varient">소문자는 대문자로 대문자는 소문자로 abc ABC</p>
+
+    <p class="dokdo-regular">구글 폰트 사용</p>
+    
+    <hr>
+    <!-- 픽셀등의 개념들을 알아보자 -->
+    <p class="content">px</p>
+    <p class="content">우리가 흔히 아는 픽셀이다</p>
+
+    <p class="content font-itelic">rem</p>
+    <p class="subtitle-rem">html이 가지고 있는 기본적인 폰트 사이즈의 배수를 나타낸다.</p>
+
+    <p class="content font-itelic">em</p>
+    <p class="subtitle-em">rem이랑 똑같이 배수로 나타내는데, 얘는 자기 자신의 폰트사이즈의 배수이다, 아무것도 상속안받았으면(html을 기본적으로 상속) rem이랑 같다.</p>
+    <p class="content font-itelic">현제 듣는 강좌 입니다.</p>
+
+    <hr>
+    <!-- viewport weight -->
+        <h2 class="rectangle-width">vw</h2>
+        <div>현제 화면의 너비가 1000px이면 100vw=1000px이다, 즉 화면대비 비율을 말해준다</div>
+
+        <!-- viewport height -->
+        <h2 class="rectangle-height">vh</h2>
+        <div></div>
+
+</body>
+</html>

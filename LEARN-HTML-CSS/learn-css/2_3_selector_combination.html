@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자손 결합자 */
+        /* section li{
+            color: blue;
+        }
+
+        section span{
+            color: red;
+        } */
+
+        /* 자식 결합자 */
+        section > ul > li{
+            color: blue;
+        }
+        /* 일반 형제 결합자 */
+        p ~ span{
+            color: red;
+            /* p태그의 동일 선상에 있는 span태그중에 p태그 아래 있는 span태그들만(p태그의 위 부분은 해당x) */
+        }
+        /* 인접 형제 결합자 */
+        p + code{
+            font-size: 30px;
+            /* p태그 바로 뒤에 나오는 code태그만 */
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>헬스</h1>
+    <hr>
+    <p>위키백과, 우리 모두의 백과사전.</p>
+<p>헬스(health)는 기본적으로 건강을 가리키며, 한국에서는 보통 웨이트 트레이닝을 의미한다. 그 외에 다음을 가리킨다.</p>
+
+<ul>
+    <li>의료</li>
+    <li>보건</li>
+    <li>체력</li>
+    <li>패션헬스</li>
+    <li>헬스 클럽</li>
+    <li>구글 헬스: <span>구글에서</span> 제공하는 개인 의료정보 뭐시기</li>
+</ul>
+
+<hr>
+<section>
+<span>이건 빨강이 아닙니다.</span>
+<p>여기 문단이 있습니다.</p>
+<code>여긴 코드가 있는곳이에요.</code>
+<span>이제 빨강입니다.</span>
+<code>코드가 <span>있어요(이건 빨강이 아닙니다.).</span></code>
+<span>이것도 빨강 입니다.</span>
+</section>
+</body>
+</html>
