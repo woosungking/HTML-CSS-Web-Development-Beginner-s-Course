@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linear-gradient{
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            background: linear-gradient(red 10%, blue,palegreen);
+            /* background: linear-gradient(45deg to right top, blue,palegreen);
+            to 하나 혹은 두개 지정가능, 색 비율도 %로 조절가능 */
+            
+        }
+        .radial-gradient{
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            background: radial-gradient(red,blue);
+            /* 중앙을 기준으로 그라데이션이 되는데 기준점을 바꿀 수 있음 */
+            /* background: radial-gradient(circle at 10% 50%, red,blue);
+            좌측상단을 기준으로 오른쪽으로 10%, 아래로 50% 이동한 부분이 그라데이션 기준점임 */
+        }
+    </style>
+</head>
+<body>
+    <h3>linear-gradient</h3>
+    <div class="linear-gradient"></div>
+
+    <div class="radial-gradient"></div>
+</body>
+</html>

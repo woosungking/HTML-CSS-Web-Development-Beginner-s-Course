@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main,section,article,div{
+            padding: 20px;
+            border: 1px solid black;
+
+        }
+        main{
+            width: 600px;
+            margin: 0 auto; 
+            /* 위 아래는 없애고 좌우는 균일하게 맞추라는 뜻 */
+            background-color: yellow;
+            
+        }
+        section{
+            background-color: violet;
+            
+        }
+        article{
+            background-color: cyan;
+        }
+        div{
+            background-color: darkmagenta;
+        }
+
+        .relative{
+            position: relative;
+            left: 20px;
+        }
+        .absolute{
+            position: absolute;
+            background: gray;
+             top: 0px;
+            left: 0px;
+            /* 현제 non-static인 조상이 body태그 이므로 body태그에 맞추어서 정렬이 되는 현상을 볼 수 있다. */
+        }
+        .fixed{
+            position: fixed;
+            background-color: blue;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 50%;
+        }
+        .sticky{
+            position: sticky;
+            top: 0px;
+            /* 아 참고로 얘는 top속성만 적용되는데 sticky의 사용 예시 들어놓을걸 생각하면 왜 그런지 알거임. */
+        }
+
+        /* 추가적으로 z-index: 숫자; 를 적용을 하면 각 요소간 겹칠때 숫자가 높은 친구가 우선순위가 높아 앞으로 배치가 된다. */
+        
+    </style>
+</head>
+<body>
+    <main>
+        main
+    <section>
+        section
+        <article>
+            article
+            <div>static</div>
+            <!-- static은 우리가 기존에 했던 inline, block의 기본값 처럼 그냥 기본적인거임 -->
+            <div class="relative">relative</div>
+            <!-- relative는 static이랑 유사한데 차이점은, left right top bottom 으로 움직일 수 있다. -->
+            <div class="absolute">absulate</div>
+            <!-- absolute 조상 태그중에 positon이 non-static인 부분을 기준으로 그 섹션 안에서 기존의 틀을깨고 막 움직일수있음,
+            현제 조상태그중에 non-static인 태그는 body 태그이다. -->
+            <div class="fixed">fixed</div>
+            <!-- fixed또한 absolute 처럼 문서의 흐름을 따르지 않는데, 쉽게 생각하면 스크롤을 내리거나 올리면 안보여야 하는데, fixed가 들어간건
+            묵묵히 알박기를 하고 있는 모습을 볼 수 있을거임. 보통 자동차 보험가입할때 보험페이지 들어가면 우측하단에 "상담사 연결"바가 있는걸 볼 수 있는데
+            스크롤을 올리던 내리던 스토커 마냥 따라다니는게(?) fixed 라고 함 -->
+            <div class="sticky">sticky</div>
+            <!-- 스크롤의 임계점에 도달 할 시 고정이 되는 친구. 예시는
+            sticky는 쉽게 티스토리 블로그 글쓰기를 하다가 글의 내용이 길어지면 스크롤도 당연히 아래로 내려가는데, 편집 툴들은 상단에 고정되서 계속 있는걸 볼 수 있을거임. 그게 sticky 라고 함. -->
+            
+            <div style="height: 1000px;"></div>
+        </article>
+    </section>
+</main>
+</body>
+</html>

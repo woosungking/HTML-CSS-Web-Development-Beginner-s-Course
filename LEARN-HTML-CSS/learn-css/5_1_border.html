@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border{
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            /* border-bottom: 1px solid red;
+            border-top:1px dashed blue;
+            border-left: 1px dotted yellowgreen;
+             */
+        }
+        .border-redius{
+            margin-top: 20px;
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+        .content-box{
+            width: 100px;
+            height: 100px;
+            border: 10px solid red;
+            box-sizing: content-box;
+            padding: 20px;
+            margin: 10px;
+
+        }
+        .border-box{
+            width: 100px;
+            height: 100px;
+            border: 10px solid blue;
+            box-sizing: border-box;
+
+            padding: 20px;
+            margin: 10px;
+        }
+/* 
+        여기서 .content-box 랑 .border-box의 차이는 둘다 같은 사이즈가 나와야 하는데 .border-box만 좀 작을거임 이유는 
+        .border-box는 content의 길이 padding border margin 길이를 전부 합쳐 weight 100px이라는거고
+        .content-box는 content의 면적 100px + padding border margin 까지 합친 크기 라는거*/
+
+/* 화면 사이즈 측정할때는 border-box로 하면 편하다! */
+
+    </style>
+</head>
+<body>
+    <div class="border"></div>
+
+    <div class="border-redius"></div>
+
+    <div class="content-box"></div>
+    <div class="border-box"></div>
+    
+</body>
+</html>
