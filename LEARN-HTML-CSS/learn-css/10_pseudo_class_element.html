@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: 30px;
+        }
+        a:link{
+            color: cyan;
+        }
+        a:visited{
+            color: red;
+        }
+        a:hover{
+            font-size: 30;
+            font-weight: 500;
+            color: blanchedalmond;
+        }
+        a:active{
+            background-color: gold;
+        }
+        fieldset:hover{
+            background-color: aquamarine;
+            box-shadow: 10 10 greenyellow;
+        }
+
+        input:focus{
+            outline: none;
+            border: 3px solid orange;
+            box-shadow: 0 0 20px orange;
+        }
+        li{
+            font-size: 50px;
+        }
+    
+        li:nth-child(2){
+            background-color: aquamarine;
+        }
+        
+        /* li태그의 형제 태그중 2번째 친구에게 스타일을 주겠다... 라는 뜻 */
+
+        li:not(.target){
+            font-size: 10px;
+        }
+
+        /* ---------- 가상 요소 ----------*/
+        .required::before{
+            content: '*';
+            font-size: 20px;
+        }
+        .required::after{
+            content: '*';
+            font-size: 20px;
+        }
+        /* 특정요소의 내용(content)의 앞 혹은 뒤에 내용을 삽입할때 사용 */
+        [data-tooltip]{
+            position: relative;
+        }
+        [data-tooltip]:focus::after{
+            /* content: "ㅋㅋㅋ"; */
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 0px;
+            left: 56px;
+            width: 200px;
+            background-color: olive;
+
+        }
+
+        /* first-letter,line 그리고 section*/
+
+        .letter::first-letter{
+            font-size: 50px;
+            color: deepskyblue;
+            font-weight: 500;
+            font-style: oblique;
+        }
+        .line::first-line{
+            font-size: 20px;
+            color: indianred;
+            font-weight: 300;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .section::selection{
+            font-size: 20px;
+            color: indianred;
+            font-weight: 300;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        /* 드레그 시 효과 */
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>pseudo class</legend>
+        <div>
+            <a href="https://github.com/woosungking">깃허브</a>
+            <a href="https://www.google.com/webhp?hl=ko&ictx=2&sa=X&ved=0ahUKEwjLwtChsNCEAxU5qFYBHfE3AgMQPQgK">구글</a>
+        </div>
+        
+    </fieldset>
+
+    <fieldset>
+        <legend>focus, before, after</legend>
+        <div class="field">
+            <label for="id" style="display: inline-block; width: 70px; margin-bottom: 10px;">ID</label>
+            <input type="text" name="id" id="id" >
+        </div>
+        <div class="field">
+            <label for="password" style="display: inline-block; width: 70px;">password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <button>보내기</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>nth-child, not</legend>
+        <ul>
+            <li class="target">1content</li>
+            <li>2content</li>
+            <li>3content</li>
+            <li>4content</li>
+            <li>5content</li>
+        </ul>
+    </fieldset>
+
+    <!-- ---------- 가상 요소 ---------- -->
+
+    <fieldset>
+        <legend>focus, before, after</legend>
+        <div class="field">
+            <label class="required" for="id" style="display: inline-block; width: 70px; margin-bottom: 10px;">ID</label>
+            <input type="text" name="id" id="id" >
+        </div>
+        <div class="field">
+            <label for="password" style="display: inline-block; width: 70px;">password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <button data-tooltip="이 버튼을 클릭 하세요!!">보내기</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>first-letter, first-line, section</legend>
+        <div>
+            <p class="letter">
+                야마하 YZF-R3/R25는 야마하 모터에서 2014년에 출시하여 현재까지 생산되고있는 쿼터클래스 스포츠 바이크이다.
+
+                MT-03과 대부분의 부품을 공유한다.
+                
+                한국에서는 배기량 321cc인 YZF-R3로 발매되며 차검이 있는 일본에서는 YZF-R25로 판매되고있다.[1]
+            </p>
+            <p class="line">
+                과거 생산되었던 Z50을 계승하는 시리즈로 현재 전 세계적으로 인기를 끌고 있다. NSR 시리즈를 닮은 면도 없지 않아 있다.
+                OEM 생산방식으로 일본에서 제작하지는 않고 태국의 공장에서 제작하여 수출하고 있다. 
+                그 이전에 태국에서는 언더본 엔진으로 유명했던 Wave i의 엔진을 그대로 차용한 듯. 
+                아직 출시 (2013년)된 지 얼마 되지 않아 내구성이 어떤지는 모르겠지만 경험자들의 이야기에 의하면 마구 굴리면서 가지고 노는 바이크로 통용 되니 내구성은 역시 혼다라는 의견이 대부분이다. 
+                각종 바이크 잡지에서도 소개 되고 있다. 북미 쪽에서는 MSX125라는 이름으로 통용되지 않고, 따로 Grom이라는 이름으로 수출되고 있다.
+            </p>
+            <p class="section">
+                대만의 이륜차 제조업체로, 세계 5위의 바이크업체이다. (주)삼양SYM과 함께 대만에서 아주 유명한 오토바이 제조회사들 중에 하나로, 킴코가 SYM보다 규모나 매출면에서 앞선다.
+
+                'KYMCO'는, '광양모터'의 이니셜이다. 정식명칭은, '광양공업고분유한공사(光陽工業股份有限公司)'이다. 공교롭게도, SYM은 '삼양(三陽)', KYMCO는 '광양(光陽)[1]'과 같은 '양'자 돌림이다. 대만의 가오슝시에 본사가 위치하고 있다.
+
+                대만 국내에서는 SYM처럼 혼다와 제휴를 해서, 혼다의 오토바이 부품들을 들여와서 생산을 하다가 1990년대 초반부터는 제휴관계를 청산하고 'KYMCO'란 브랜드로 오토바이를 생산한다. 기술력은 뛰어난 편이며, 현재 BMW 모토라드의 C650 시리즈의 엔진을 위탁생산하고 있다. 또한, 유럽에서도 상당한 점유율을 갖고 있는 등 탄탄한 기술력을 가지고 있는 회사이다.
+
+            </p>
+        </div>
+    </fieldset>
+</body>
+</html>
