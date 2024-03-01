@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .flex-container{
+            background-color: green;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+
+            /* justify-content: end;
+            justify-content: start;
+            justify-content: space-between; */
+            /* 여기까지는 수직 정렬(flex-flow: nowrap) */
+
+            /* flex-flow: row wrap;
+            align-content: flex-end; */
+            /* 세로 정렬 flex-flow: row wrap; */
+
+            align-items: center;
+            
+            /* align-content랑 비슷해보이는데, align-content는 라인을 정렬을 해주거
+            align-items 은 라인을 기준으로 정렬을 해줌 */
+        }
+        .flex-item{
+            background-color: palevioletred;
+            border: 2px solid purple;
+            color: wheat;
+            border-collapse: collapse;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+</body>
+</html>
