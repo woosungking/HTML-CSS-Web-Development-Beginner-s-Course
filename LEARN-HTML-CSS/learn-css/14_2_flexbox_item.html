@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .flex-container{
+            background-color: green;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+
+        }
+        .flex-item{
+            background-color: palevioletred;
+            border: 2px solid purple;
+            color: wheat;
+            border-collapse: collapse;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+
+        .item1{
+            /* order: 5;
+            flex-grow: 1;
+            flex-shrink: 1; */
+        }
+        .item2{
+            /* order: 4;
+            flex-grow: 1;
+            flex-shrink: 1; */
+        }
+        .item3{
+            /* order: 3;
+            flex-grow: 1;
+            flex-shrink: 1; */
+        }
+        .item4{
+            /* order: 2;
+            flex-grow: 2;
+            flex-shrink: 1; */
+        }
+        .item5{
+            /* order: 1;
+            flex-grow: 1;
+            flex-shrink: 1; */
+        }
+        /* 순서가 낮은 친구부터 왼쪽으로 정렬 */
+        /* flex-grow는 가로를 전부 채우려고 함, 값이 낮을수록 더 옆으로 채워짐 */
+        /* flex-shrink는 창을 축소할때 일정하게 찌그러지지않고 값이 낮은 친구들이 덜 찌그러?지게 만듬 */
+    </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+  </div>
+</html>
