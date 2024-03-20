@@ -1,0 +1,28 @@
+*{
+color: #444;
+}
+
+#css-abbr{
+font-size:40px;
+color: green;
+text-decoration: underline;
+}
+#short, #sweet{
+    font-family: cursive;
+}
+#short{
+    text-transform: lowercase;
+    font-size:14px;
+
+}
+#sweet{
+    color: blueviolet;
+    font-style: italic;
+}
+
+/* 
+The "CSS" text is green, underlined and 40pt font.
+• Both "Short" and "Sweet" have a cursive font type.
+• Any text that is not green/purple has a color of #444.
+• The "short" text is all lower-case and has a font-size of 14pt.
+• The "Sweet" text is purple and italicized */
