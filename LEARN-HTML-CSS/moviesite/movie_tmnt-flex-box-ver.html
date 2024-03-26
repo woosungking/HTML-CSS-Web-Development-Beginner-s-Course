@@ -1,0 +1,428 @@
+movie_tmnt.html
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>TMNT - Rancid Tomatoes</title>
+
+      <meta charset="utf-8" />
+      <link href="movie_tmnt.css" type="text/css" rel="stylesheet" />
+
+      <style>
+        *{
+            font-size: 12px;
+            font-family: Arial;
+            font-style: Arial;
+            
+        }
+        
+
+        body{
+            height: 200vh;
+            width: 200vh;
+            background-color: rgb(193, 205, 190);
+        }
+
+        header{
+            background-image: url('./images/rancidbannerbg.png');
+            width: 100%;
+            min-height: 50px;
+            max-height: 50px;
+        }
+
+        header > img{
+            display: block;
+            margin: 0 auto;
+            
+            /* position: absolute; */
+        }
+        nav{
+            
+            font-style: bold;
+            font-size: 24px;
+            text-shadow: 3px 3px #999999;
+        }
+
+        nav>h1{ 
+            height: 3%;
+            align-items: center;
+            align-content: center;
+            font-size: 20px;
+            margin:0 50%;
+        }
+        main{
+            margin:auto;
+            position: relative;
+            /* display: flex; */
+            max-width: 500px;
+            min-width: 500px;
+            height: 70%;
+            background-color: #EEEEEE;
+            z-index: -1;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            border-bottom: none;
+            border-top-left-radius: 25px;
+            
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        main>div:nth-child(2){
+            font-size: 48px;
+            font-style: bold;
+            color: red;
+            z-index: 2;
+            position: absolute;
+            left: 15%;
+        }
+
+        section{
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            /* width: 75%; */
+            min-width: 550px;
+            max-width: 550px;
+            height: 100%;
+        }
+
+        article{
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: auto;
+            
+            width: 30%;
+            margin-top: 15%;
+        }
+
+        article > p {
+            width: 100%;
+        }
+        
+        
+        aside{
+            /* width: 40%; */
+            height: 100.1%;
+            display: inline-block;
+            position: absolute;
+            width: 30%;
+            right: -30%;
+            top: -0.5%;
+            box-shadow: 0px 0px 10px 0px 10px 0px 0px rgba(0, 0, 0, 0.5);
+            border-right: 1px solid black;
+            
+            border-top-right-radius: 20px;
+
+            background-color: rgb(141, 199, 132);
+            border-top-right-radius: 20px;
+            
+            margin: 5px;
+            
+            
+
+            
+        }
+
+        .rottenlarge{
+            margin: auto;
+            width: 100%;
+            height: 50px;
+            border-top-left-radius: 20px;
+            background-size: contain;
+            background-image: url('./images/rottenlargebg.png');
+            display: block;
+            position:absolute;
+            
+            
+        }
+        .rottenlarge > img{
+            height: 50px;
+            border-top-left-radius: 20px;
+        }
+
+
+        .vegetable, .human{
+            
+            border: 2px solid #CCCCCC;
+            background-color: #FFFFFF;
+            font-family: Georgia, "Times New Roman", serif;
+            padding: 8px;
+            border-radius: 20px;
+            margin-left: 10px;
+                    
+        }
+        .rotten, .Critic{
+            /* 임스 뉴 로만 또는 세리프 폰트를 사용합니다. 인용구 상자의 콘텐츠와 테두리 사이에는 8px의 간격이 있습니다. 각 상자에는 리뷰어가 영화를 좋아하거나 싫어하는지에 대한 아이콘이 있습니다. 이 아이콘은 인용구 상자의 왼쪽에 있으며 텍스트와 오른쪽 사이에 5px의 간격이 있습니다. 이미지 주위에 텍스트가 필요한대로 텍스트가 줄 바꿈됩니다.
+리뷰어의 개인 정보는 인용구 상자 아래에 나타납니다. 이 정보에는 리뷰어의 이름 및 이탤릭체로 표시된 출판물이 포함됩니다. 리뷰어 아이콘 (critic.gif)이 텍스트의 왼쪽에 표시되며 텍스트와 5px의 수평 간격이 있습니다. 리뷰 간에는 20pt의 수직 공간이 있습니다. 상위 여덟 개의 리뷰는 그림과 같아야 하지만, 마지막 두 개의 리뷰는 원하는 텍스트를 포함하도록 변경해야 합니다. 창의적이고 재미있거나 흥미로운 내용을 이 영화에 대해 작성해보세요 */
+        }
+
+        
+
+        aside > dl{
+            background-color: rgb(141, 199, 132);
+            
+        }
+        
+        aside > dl > dt{
+            font-weight: bold;
+            margin-left: 5px
+            ;
+        }
+
+        aside >dl>dd>{
+            align-items: center;
+            
+        }
+
+        .overview > img{
+            width: 100%;
+            height: 30%;
+            object-fit: cover;
+            overflow: hidden;
+            border-top-right-radius: 20px;
+        }
+
+        
+
+        footer{
+            
+            
+        
+            /* max-width: 100%;
+            min-width: 100%;  */
+            height: 3%;
+            position: absolute;
+            background-color: aquamarine;
+            width: 128.8%;
+            left: -0.2%;
+            
+            /* left: 20%; */
+
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+
+            /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5); */
+            
+            background-color: rgb(141, 199, 132);
+            
+            box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+            
+            
+        }
+
+        .footer>p{
+            text-align: center;
+            align-items: center;
+        }
+
+        .link{
+            position: absolute;
+            right: 0;
+        }
+
+ 
+      </style>
+   </head>
+
+   <body>
+
+      <header>
+         <img src="images/rancidbanner.png" alt="Rancid Tomatoes" />
+      </header>
+
+      <nav>
+        <h1>TMNT(2007)</h1>
+      </nav>
+      
+      
+        <main>
+            <div class="rottenlarge">
+                <img src="images/rottenlarge.png" alt="Rotten"/>
+             </div> 
+             <div>
+                33%
+             </div>
+             <section>
+                
+
+            <article> 
+              <p class="vegetable">
+                 <img src="images/rotten.gif" alt="Rotten" />
+                 <q>Impersonally animated and arbitrarily plotted, the story appears to have been made up as the filmmakers went along.</q>
+              </p>
+
+              <p class="human">
+                 <img src="images/critic.gif" alt="Critic" />
+                 Ed Gonzalez <br />
+                 Slant Magazine
+              </p>
+        
+              <p class="vegetable">
+                 <img src="images/fresh.gif" alt="Fresh" />
+                 <q>The striking use of image and motion allows each sequence to leave an impression. It's an accomplished restart to this franchise.</q>
+              </p>
+
+              <p class="human">
+                 <img src="images/critic.gif" alt="Critic" />
+                 Mark Palermo <br />
+                 Coast (Halifax, Nova Scotia)
+              </p>
+        
+              <p class="vegetable">
+                 <img src="images/rotten.gif" alt="Rotten" />
+                 <q>The script feels like it was computer generated. This mechanical presentation lacks the cheesy charm of the three live action films.</q>
+              </p>
+
+              <p class="human">
+                 <img src="images/critic.gif" alt="Critic" />
+                 Steve Rhodes <br />
+                 Internet Reviews
+              </p>
+        
+              <p class="vegetable">
+                 <img src="images/rotten.gif" alt="Rotten" />
+                 <q>YOUR REVIEW HERE</q>
+              </p>
+
+              <p class="human">
+                 <img src="images/critic.gif" alt="Critic" />
+                 NAME <br />
+                 PUBLICATION
+              </p>
+              <p class="vegetable">
+                <img src="images/rotten.gif" alt="Rotten" />
+                <q>Ditching the cheeky, self-aware wink that helped to excuse the concept's inherent corniness, the movie attempts to look polished and 'cool,' but the been-there animation can't compete with the then-cutting-edge puppetry of the 1990 live-action movie.</q>
+             </p>
+
+             <p class="human">
+                <img src="images/critic.gif" alt="Critic" />
+                Peter Debruge <br />
+                Variety
+             </p>
+            </article>
+
+            <article style="margin-right: 20%;">
+               
+           
+                 <p class="vegetable">
+                    <img src="images/fresh.gif" alt="Fresh" />
+                    <q>TMNT is a fun, action-filled adventure that will satisfy longtime fans and generate a legion of new ones.</q>
+                 </p>
+   
+                 <p class="human">
+                    <img src="images/critic.gif" alt="Critic" />
+                    Todd Gilchrist <br />
+                    IGN Movies
+                 </p>
+           
+                 <p class="vegetable">
+                    <img src="images/rotten.gif" alt="Rotten" />
+                    <q>It stinks!</q>
+                 </p>
+   
+                 <p class="human">
+                    <img src="images/critic.gif" alt="Critic" />
+                    Jay Sherman (unemployed)
+                 </p>
+           
+                 <p class="vegetable">
+                    <img src="images/rotten.gif" alt="Rotten" />
+                    <q>The rubber suits are gone and they've been redone with fancy computer technology, but that hasn't stopped them from becoming dull.</q>
+                 </p>
+                 <p class="human">
+                    <img src="images/critic.gif" alt="Critic" />
+                    Joshua Tyler <br />
+                    CinemaBlend.com
+                 </p>
+           
+                 <p class="vegetable">
+                    <img src="images/rotten.gif" alt="Rotten" />
+                    <q>YOUR REVIEW HERE</q>
+                 </p>
+                 <p class="human">
+                    <img src="images/critic.gif" alt="Critic" />
+                    NAME <br />
+                    PUBLICATION
+                 </p>
+           
+                 <p class="vegetable">
+                    <img src="images/rotten.gif" alt="Rotten" />
+                    <q>The turtles themselves may look prettier, but are no smarter; torn irreparably from their countercultural roots, our superheroes on the half shell have been firmly co-opted by the industry their creators once sought to spoof.</q>
+                 </p>
+                 <p class="human">
+                    <img src="images/critic.gif" alt="Critic" />
+                    Jeannette Catsoulis <br />
+                    New York Times
+                 </p>
+            </article>
+        
+            </section>
+        
+            <aside>
+                <div class="overview">
+                   <img src="images/overview.png" alt="general overview" />
+                </div>
+            
+                <dl>
+                   <dt>STARRING</dt>
+                   <dd>Patrick Stewart <br /> Mako <br /> Sarah Michelle Gellar <br /> Kevin Smith</dd>
+                
+                   <dt>DIRECTOR</dt>
+                   <dd>Kevin Munroe</dd>
+                
+                   <dt>RATING</dt>
+                   <dd>PG</dd>
+                
+                   <dt>THEATRICAL RELEASE</dt>
+                   <dd>Mar 23, 2007</dd>
+        
+                    <dt>MOVIE SYNOPSIS</dt>
+                    <dd>After the defeat of their old arch nemesis, The Shredder, the Turtles have grown apart as a family.</dd>
+
+                    <dt>MPAA RATING</dt>
+                    <dd>PG, for animated action violence, some scary cartoon images and mild language</dd>
+
+                    <dt>RELEASE COMPANY</dt>
+                    <dd>Warner Bros.</dd>
+
+                    <dt>RUNTIME</dt>
+                    <dd>90 mins</dd>
+
+                    <dt>GENRE</dt>
+                    <dd>Action/Adventure, Comedies, Childrens, Martial Arts, Superheroes, Ninjas, Animated Characters</dd>
+        
+                    <dt>BOX OFFICE</dt>
+                    <dd>$54,132,596</dd>
+
+                    <dt>LINKS</dt>
+                    <dd>
+                       <ul>
+                          <li><a href="http://www.ninjaturtles.com/">The Official TMNT Site</a></li>
+                          <li><a href="http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles/">RT Review</a></li>
+                          <li><a href="http://www.rottentomatoes.com/">RT Home</a></li>
+                       </ul>
+                    </dd>
+                </dl>
+      
+            </aside>
+    
+    
+
+  
+            <footer>
+                <p>(1-10) of 88</p>
+              </footer>
+    </main>
+    
+
+    <div class="link">
+        <a href="hhttps://validator.w3.org/"><img src="images/w3c-html.png" alt="Valid HTML5" /></a><br />
+        <a href="https://jigsaw.w3.org/css-validator/"><img src="images/w3c-css.png" alt="Valid CSS" /></a>
+     </div>
+
+   </body>
+</html>
