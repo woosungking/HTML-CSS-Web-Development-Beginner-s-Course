@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styleA.css">
-    <style>
-
-        /* .flex-container{
+ .flex-container{
             display: flex;
             justify-content: start;
             height: 100vh;
@@ -50,31 +41,4 @@
             width: 10px;
             height: 10px;
             background-color: aqua;
-        } */
-    </style>
-</head>
-<body>
-
-    <div class="flex-container">
-        <div class="item odd a">
-            A
-        </div>
-        <div class="item even b">
-            B
-        </div>
-        <div class="item odd c">
-            C
-        </div>
-        <div class="item even d">
-            D
-        </div>
-        <div class="item odd e">
-                E
-        </div>
-        <div class="item even f">
-                F
-        </div>
-      </div>
-    
-</body>
-</html>
+        }
