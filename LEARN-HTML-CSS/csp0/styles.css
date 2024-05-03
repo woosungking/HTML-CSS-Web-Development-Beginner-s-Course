@@ -1,0 +1,233 @@
+/*
+< !-- 이름 : 문성현 날짜 : 2023년 4월 17일 섹션 : IAB6080 이것은 저에 대한 간단한 소개글입니다. 
+여기에는 이번학기 인터넷 설계 실습에서 수행한 사이드 프로젝트 및 공부한 내용 링크가 포함되어 있습니다. 
+  INSERT YOUR SECTION/TA NAME
+
+  WRITE A 2-3 SENTENCE SHORT FILE DESCRIPTION HERE
+*/
+
+/*
+  Remember: This body ruleset is to get you started, but does not count
+  towards the CSP requirements!
+*/
+body {
+
+  font-family: Oswald;
+
+  background-image: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdMASpn%2Fbtrek9j0xuw%2F5jdE1aXzcfyazDrv26cRSk%2Fimg.png');
+  background-size: cover;
+
+  /* 배경 이미지를 화면 크기에 맞게 늘리거나 축소합니다. */
+  background-position: center center;
+  /* 배경 이미지를 화면 중앙에 위치시킵니다. */
+  background-repeat: no-repeat;
+  /* 배경 이미지를 반복하지 않습니다. */
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 20px;
+}
+
+
+#nav-container {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+}
+
+.menu-list li {
+  margin-left: 10px;
+}
+
+.menu-list li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-list li a:hover {
+  color: #777;
+}
+
+section {
+  margin: 50px;
+}
+
+h1 {
+  font-family: Lobster;
+  font-size: 40px;
+  /* 글자 크기 */
+  font-weight: bold;
+  /* 글자 굵기 */
+  color: #333;
+  /* 글자 색상 */
+  text-align: center;
+  /* 글자 가운데 정렬 */
+  text-transform: uppercase;
+  /* 대문자 변환 */
+  margin-bottom: 20px;
+  /* 아래 마진 */
+
+}
+
+
+
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 화면 높이에 따라 조절 가능 */
+}
+
+p {
+  font-family: Oswald;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  text-align: justify;
+  color: #333;
+}
+
+p::before {
+
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-right: 0.4rem;
+}
+
+p::after {
+
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-left: 0.4rem;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.list {
+  margin-left: 45px;
+  padding: 0;
+}
+
+.list li {
+  font-weight: bold;
+  color: blue;
+  margin-bottom: 5px;
+}
+
+.list li:hover {
+  color: red;
+  cursor: pointer;
+}
+
+ol {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+ol li strong {
+  font-weight: bold;
+  color: #777;
+}
+
+ol li a {
+  color: #777;
+  text-decoration: none;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  border-bottom: 1px solid blue;
+}
+
+a:hover {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+ol li a:hover {
+  color: #333;
+}
+
+blockquote {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 40px;
+  padding-left: 20px;
+  border-left: 2px solid #ccc;
+}
+
+
+
+#happy {
+  max-width: 100%;
+  /* 이미지의 최대 너비를 100%로 설정하여, 부모 요소의 너비에 맞게 조절합니다. */
+  max-height: 100%;
+  /* 이미지의 최대 높이를 100%로 설정하여, 부모 요소의 높이에 맞게 조절합니다. */
+  border-radius: 5px;
+  /* 이미지 모서리를 둥글게 만듭니다. */
+}
+
+/* 인용문 앞에 인용 부호 추가 */
+blockquote:before {
+  content: open-quote;
+  font-size: 36px;
+  line-height: 1;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* 인용문에 hover 효과 추가 */
+blockquote:hover {
+  background-color: orange;
+}
+
+
+
+/* CSS 코드 */
+#carpediem {
+  font-size: 24px;
+  /* 텍스트 크기 조정 */
+  font-weight: bold;
+  /* 텍스트 굵게 */
+  font-style: italic;
+  /* 텍스트 기울임 */
+  text-align: center;
+  /* 텍스트 가운데 정렬 */
+  text-transform: uppercase;
+  /* 텍스트 대문자로 변환 */
+  color: #ff0000;
+  /* 텍스트 색상 설정 */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  /* 텍스트 그림자 설정 */
+  border-top: 1px solid #000000;
+  /* 상단에 선 추가 */
+  border-bottom: 1px solid #000000;
+  /* 하단에 선 추가 */
+  padding: 10px 0;
+  /* 텍스트 내부 여백 설정 */
+  /* 다른 스타일을 적용할 수도 있습니다. */
+}
